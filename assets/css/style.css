@@ -407,7 +407,7 @@ ul {
 .header .navbar-list__item:hover::after {
   position: absolute;
   content: "";
-  width: 182%;
+  width: 183%;
   z-index: -1;
   height: 100%;
   top: 0;
@@ -1452,9 +1452,10 @@ ul {
     display: block;
   }
   .header .navbar-list {
+    display: none;
     position: absolute;
     top: 52.5px;
-    left: -93px;
+    left: -91.5px;
     background: #55150c;
     padding: 30px;
     z-index: 99;

@@ -99,9 +99,10 @@
         &-list {
             backface-visibility: hidden;
             @include md {
+                display: none;
                 position: absolute;
                 top: $gap * 3.5;
-                left: -$gap * 6.2;
+                left: -$gap * 6.1;
                 background: darken($color-accent, 24);
                 padding: $gap *2;
                 z-index: 99;
@@ -129,7 +130,7 @@
                   &::after{
                       position: absolute;
                       content: "";
-                      width: 182%;
+                      width: 183%;
                       z-index: -1;
                       height: 100%;
                       top: 0;left: -31px;
