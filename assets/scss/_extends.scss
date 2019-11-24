@@ -1,0 +1,119 @@
+%container {
+    max-width: $xl;
+    margin: 0 auto;
+    padding-right: $gap;
+    padding-left: $gap;
+}
+
+;
+
+%section {
+    @include ul-min {
+        padding-top: $gap * 5;
+        padding-bottom: $gap * 5;
+    }
+    @include ul-xl {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+    @include lg-md {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+    @include xl-lg {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+    @include md {
+        padding-top: $gap * 2;
+        padding-bottom: $gap * 2;
+    }
+    @include sm {
+        padding-top: $gap * 2;
+        padding-bottom: $gap * 2;
+    }
+    @include xx {
+        padding-top: $gap * 2;
+        padding-bottom: $gap * 2;
+    }
+
+}
+
+%title-section {
+    position: relative;
+    text-align: center;
+    padding-bottom: $gap * 3;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        width: 50px;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        background-color: #000;
+    }
+}
+
+%btn-accent {
+    width: 180px;
+    padding: 12.5px;
+    height: 50px;
+    border: 2px solid #fff;
+    text-align: center;
+    transition: background-color .3s;
+    border-radius: 2px;
+    
+
+    .btn {
+        transition: color .3s;
+       padding: 12px 20px;
+    }
+
+    &:hover {
+        background-color: #fff;
+
+        .btn {
+            color: #c0301c;
+        }
+    }
+
+   
+    @include lg-md{
+        width: 120px;
+        height: 40px;
+        padding: 7px;
+        .btn {
+            font-size: .875rem;
+           padding: 6px 10px;
+        }
+    }
+    @include md-sm{
+        width: 100px;
+        padding: 3px;
+        height: 30px;
+        .btn {
+            font-size: .875rem;
+           padding: 3px 5px;
+        }
+    }
+    @include md-sm{
+        width: 100px;
+        padding: 3px;
+        height: 30px;
+        .btn {
+            font-size: .875rem;
+           padding: 3px 5px;
+        }
+    }
+    @include xx{
+        width: 100px;
+        padding: 3px;
+        height: 30px;
+        .btn {
+            font-size: .875rem;
+           padding: 3px 5px;
+        }
+    }
+}

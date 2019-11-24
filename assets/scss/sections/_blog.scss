@@ -1,0 +1,123 @@
+.blog {
+    background-color: $color-main;
+h4{
+    display: none;
+}
+    &-content {
+        @extend %section;
+        text-align: center;
+
+        &__title {
+            @extend %title-section;
+        }
+
+        &__item {
+            display: flex;
+
+            padding-top: $gap * 5;
+            position: relative;
+            @include md {
+              flex-direction: column;
+            }
+            &:nth-of-type(2)::after {
+                content: "";
+                position: absolute;
+                top: 37px;
+                left: 0;
+                width: 100%;
+                height: 1.5px;
+                background: darken($color-main-dark, 8)
+            }
+
+            p {
+                text-align: left;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &-image {
+        margin-right: 38px;
+        @include md {
+            width: 100%;
+        }
+        img{
+            @include md {
+                width: 100%;
+            }
+        }
+    }
+
+    &-text {
+        &__description {
+            display: flex;
+            align-items: center;
+            padding-bottom: $gap * 1.5;
+        }
+
+        &__date {
+            width: 76px;
+            height: 76px;
+            border: 2px solid rgb(102, 101, 101);
+            display: flex;
+            margin-right: $gap * 1.5;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            p {
+                text-align: center;
+                font-family: $font-header;
+                font-weight: bold;
+                font-size: 1.25rem;
+                color: rgb(124, 122, 122);
+            }
+        }
+
+        &__title {
+            text-align: left;
+
+            h3 {
+                padding-bottom: 5px;
+                font-size: 1rem;
+                color: $color-accent;
+            }
+
+            p {
+                font-size: 0.875rem;
+                padding-top: 5px;
+            }
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        &__button {
+            display: flex;
+            margin-top: $gap * 1.5;
+            align-items: center;
+            width: 180px;
+            height: 30px;
+            border: 2px solid transparent;
+            transition: border-bottom .4s, padding-left .8s, color .3s;
+            backface-visibility: hidden;
+
+            a {
+                color: rgb(124, 122, 122);
+                font-weight: bold;
+                font-size: .875rem;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                padding-left: 45px;
+                border-bottom: 2px solid $color-accent;
+
+                a {
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+}

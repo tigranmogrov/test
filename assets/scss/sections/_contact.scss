@@ -1,0 +1,201 @@
+.contact {
+    background-color: $color-main;
+
+    h4 {
+        display: none;
+    }
+
+    &-content {
+        @extend %section;
+        text-align: center;
+
+        &__title {
+            @extend %title-section;
+        }
+        &__subtitle{
+            @include sm {
+                font-size: .875rem;
+            }
+        }
+    }
+
+    &-block {
+        display: flex;
+        justify-content: center;
+        padding-top: $gap * 5;
+
+        @include lg-md {
+            justify-content: center;
+        }
+        @include md {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &__information {
+            text-align: left;
+            width: 240px;
+            @include md {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
+               text-align: center;
+               width: 100%;
+              padding-bottom: 10px;
+            }
+            @include sm {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+               padding-bottom: 10px;
+             }
+            &-item {
+                padding: 0 $gap * 1.5;
+                position: relative;
+                @include md {
+                    width: 190px;
+                    padding: 0 0;
+                    margin: 0 auto;
+                 }
+                 @include sm {
+                    width: 100%;
+                    padding: 0 0;
+                    margin: 20px auto;
+                 }
+                &:not(:first-child) {
+                    margin: 30px 0;
+                    @include md {
+                       margin: 15px 0;
+                     }
+                }
+
+                h3 {
+                    text-transform: uppercase;
+                    padding-bottom: $gap + 5;
+                    font-size: .875rem;
+                    @include md {
+                        padding-bottom: $gap;
+                        font-size: .775rem;
+                      }
+                }
+
+                p {
+                    line-height: 1.6rem;
+                    font-size: .75rem;
+                    @include md {
+                        line-height: 1.4rem;
+                        font-size: .675rem;
+                      }
+                }
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: -3px;
+            left: -$gap * 8.5;
+            font-size: 1.2rem;
+            @include md {
+                top: -$gap * 2;
+                left: 0;
+              }
+        }
+    }
+
+    &-form {
+        &__container {
+            width: 730px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include lg-md {
+                width: 50%;
+                flex-direction: column;
+            }
+            @include md {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        .form-input {
+            padding: ($gap / 2);
+            width: 350px;
+            height: 50px;
+            margin: 0 0 ($gap) 0;
+            border: 1.2px solid darken($color-main-dark, 45);
+            transition: border-color .4s;
+            outline: none;
+
+            @include lg-md {
+                width: 300px;
+            }
+            @include md {
+                width: 100%;
+            }
+
+            &:nth-of-type(5) {
+                width: 100%;
+                height: 150px;
+
+                @include lg-md {
+                    width: 300px;
+                }
+                @include md {
+                    width: 100%;
+                }
+
+                &::placeholder {
+                    transform: translateY(-45px);
+                }
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $color-accent;
+            }
+
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+
+            &::placeholder {
+                text-transform: uppercase;
+                font-size: .75rem;
+                transition: opacity .4s;
+            }
+
+        }
+
+        .form-submit {
+            width: 180px;
+            height: 50px;
+            padding: 0 ($gap * 3);
+            margin-left: 0;
+            background-color: transparent;
+            outline: none;
+            text-transform: uppercase;
+            border: 1.2px solid darken($color-main-dark, 45);
+            transition: background-color .4s, color .4s;
+
+            @include lg-md {
+                width: 180px;
+            }
+
+            &:hover {
+                background-color: $color-accent;
+                color: $color-main;
+            }
+
+            &:focus {
+                box-shadow: inset 1px 0px 3px 2px $color-main-dark;
+            }
+        }
+    }
+}

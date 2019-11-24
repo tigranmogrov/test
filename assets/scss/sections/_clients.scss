@@ -1,0 +1,33 @@
+.clients{
+    background-color:$color-main-dark;
+    h4{
+        display: none;
+    }
+    &-content{
+        @extend %section;
+        text-align: center;
+        p{
+            width: 755px;
+            margin: 0 auto;
+            padding-bottom: $gap * 3;
+            @include md {
+                width: 100%;
+            }
+            @include sm {
+             font-size: .875rem;
+            }
+        }
+    }
+    &-partner{
+        padding-bottom: $gap * 4;
+        img{
+            vertical-align: middle;
+            margin: $gap ($gap * 2);
+           
+        }
+        @include sm {
+            width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
