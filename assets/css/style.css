@@ -1154,6 +1154,9 @@ ul {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 0px;
 }
 
@@ -1254,10 +1257,14 @@ ul {
 .contact-form .form-submit {
   width: 180px;
   height: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0 45px;
   margin-left: 0;
   background-color: transparent;
   outline: none;
+  border-radius: 0px;
   text-transform: uppercase;
   border: 1.2px solid #858585;
   -webkit-transition: background-color .4s, color .4s;
