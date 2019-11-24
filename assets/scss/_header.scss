@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center top;
     background-size: cover;
 
@@ -27,7 +27,7 @@
         font-weight: bold;
 
         @include sm {
-            font-size: 1rem;
+            font-size: 1.675rem;
         }
     }
 
@@ -205,8 +205,8 @@
         }
 
         &__buttons {
-            margin: 0 auto;
             @extend %btn-accent;
+            margin: 0 auto;
         }
     }
 }

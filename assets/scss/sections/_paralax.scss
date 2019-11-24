@@ -1,4 +1,5 @@
 .paralax {
+  max-width: 100%;
   background-image: url(../img/Paralax.png);
     background-position: center center;
     background-size: cover;
@@ -36,7 +37,7 @@
         }
         &__button{
          @extend  %btn-accent;
-         margin: ($gap * 2.3) auto;
+         margin: 0 auto;
            }
     }
   

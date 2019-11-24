@@ -12,26 +12,32 @@
         padding-top: $gap * 5;
         padding-bottom: $gap * 5;
     }
+
     @include ul-xl {
         padding-top: $gap * 4;
         padding-bottom: $gap * 4;
     }
+
     @include lg-md {
         padding-top: $gap * 4;
         padding-bottom: $gap * 4;
     }
+
     @include xl-lg {
         padding-top: $gap * 4;
         padding-bottom: $gap * 4;
     }
+
     @include md {
         padding-top: $gap * 2;
         padding-bottom: $gap * 2;
     }
+
     @include sm {
         padding-top: $gap * 2;
         padding-bottom: $gap * 2;
     }
+
     @include xx {
         padding-top: $gap * 2;
         padding-bottom: $gap * 2;
@@ -57,63 +63,35 @@
 }
 
 %btn-accent {
-    width: 180px;
-    padding: 12.5px;
-    height: 50px;
-    border: 2px solid #fff;
-    text-align: center;
-    transition: background-color .3s;
-    border-radius: 2px;
     
-
     .btn {
-        transition: color .3s;
-       padding: 12px 20px;
-    }
-
-    &:hover {
-        background-color: #fff;
-
-        .btn {
+        max-width: 180px;
+        max-height: 50px;
+        padding: $gap 10px;
+        border-radius: 2px;
+        border: 2px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color .3s, background-color .3s;
+        margin: 0 auto;
+        &:hover {
             color: #c0301c;
-        }
+            background-color: #fff;
+    }
+    @include lg-md {
+            font-size: .875rem;
     }
 
+    @include md-sm {
+            font-size: .875rem;
+    }
+
+    @include xx {
+            font-size: .875rem;
+            padding: 10px 0;
+            width: 120px;
+    }
+    }
    
-    @include lg-md{
-        width: 120px;
-        height: 40px;
-        padding: 7px;
-        .btn {
-            font-size: .875rem;
-           padding: 6px 10px;
-        }
-    }
-    @include md-sm{
-        width: 100px;
-        padding: 3px;
-        height: 30px;
-        .btn {
-            font-size: .875rem;
-           padding: 3px 5px;
-        }
-    }
-    @include md-sm{
-        width: 100px;
-        padding: 3px;
-        height: 30px;
-        .btn {
-            font-size: .875rem;
-           padding: 3px 5px;
-        }
-    }
-    @include xx{
-        width: 100px;
-        padding: 3px;
-        height: 30px;
-        .btn {
-            font-size: .875rem;
-           padding: 3px 5px;
-        }
-    }
 }

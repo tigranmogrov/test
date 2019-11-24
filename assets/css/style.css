@@ -31,31 +31,30 @@
   background-color: #000;
 }
 
-.header-content__buttons, .paralax-content__button {
-  width: 180px;
-  padding: 12.5px;
-  height: 50px;
-  border: 2px solid #fff;
-  text-align: center;
-  -webkit-transition: background-color .3s;
-  -o-transition: background-color .3s;
-  transition: background-color .3s;
-  border-radius: 2px;
-}
-
 .header-content__buttons .btn, .paralax-content__button .btn {
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
-  padding: 12px 20px;
+  max-width: 180px;
+  max-height: 50px;
+  padding: 15px 10px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color .3s, background-color .3s;
+  -o-transition: color .3s, background-color .3s;
+  transition: color .3s, background-color .3s;
+  margin: 0 auto;
 }
 
-.header-content__buttons:hover, .paralax-content__button:hover {
-  background-color: #fff;
-}
-
-.header-content__buttons:hover .btn, .paralax-content__button:hover .btn {
+.header-content__buttons .btn:hover, .paralax-content__button .btn:hover {
   color: #c0301c;
+  background-color: #fff;
 }
 
 * {
@@ -292,7 +291,7 @@ ul {
 
 .header {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-position: center top;
   background-size: cover;
 }
@@ -886,6 +885,7 @@ ul {
 }
 
 .paralax {
+  max-width: 100%;
   background-image: url(../img/Paralax.png);
   background-position: center center;
   background-size: cover;
@@ -908,7 +908,7 @@ ul {
 }
 
 .paralax-content__button {
-  margin: 34.5px auto;
+  margin: 0 auto;
 }
 
 .blog {
@@ -1393,14 +1393,8 @@ ul {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .header-content__buttons, .paralax-content__button {
-    width: 120px;
-    height: 40px;
-    padding: 7px;
-  }
   .header-content__buttons .btn, .paralax-content__button .btn {
     font-size: .875rem;
-    padding: 6px 10px;
   }
   .header-content__title {
     font-size: 2rem;
@@ -1569,23 +1563,8 @@ ul {
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
-  .header-content__buttons, .paralax-content__button {
-    width: 100px;
-    padding: 3px;
-    height: 30px;
-  }
   .header-content__buttons .btn, .paralax-content__button .btn {
     font-size: .875rem;
-    padding: 3px 5px;
-  }
-  .header-content__buttons, .paralax-content__button {
-    width: 100px;
-    padding: 3px;
-    height: 30px;
-  }
-  .header-content__buttons .btn, .paralax-content__button .btn {
-    font-size: .875rem;
-    padding: 3px 5px;
   }
   .header-content__title {
     font-size: 1.8rem;
@@ -1602,7 +1581,7 @@ ul {
     padding-bottom: 30px;
   }
   .header-logo {
-    font-size: 1rem;
+    font-size: 1.675rem;
   }
   .services-block {
     -ms-flex-wrap: wrap;
@@ -1682,14 +1661,10 @@ ul {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .header-content__buttons, .paralax-content__button {
-    width: 100px;
-    padding: 3px;
-    height: 30px;
-  }
   .header-content__buttons .btn, .paralax-content__button .btn {
     font-size: .875rem;
-    padding: 3px 5px;
+    padding: 10px 0;
+    width: 120px;
   }
   .header-content__title {
     font-size: 1rem;
