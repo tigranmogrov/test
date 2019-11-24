@@ -3,6 +3,7 @@
     height: 100vh;
     background-position: center top;
     background-size: cover;
+
     &-overlay {
         position: absolute;
         top: 0;
@@ -97,44 +98,18 @@
 
         &-list {
             backface-visibility: hidden;
-            @include md{
-              position: relative;
-              &::after{
-                  position: absolute;
-                  content: "";
-                  left: 5px;
-                  top: -10px;
-                  width: 100%;
-                  height: 230px;
-                  background: darken($color-accent, 23);
-                  z-index: -1;
-              }
-            }
-            &.show {
-                display: block;
+            @include md {
                 position: absolute;
-                top: $gap * 4;
-                left: -$gap * 4;
-                width: 100px;
-                text-align: center;
-                height: 100%;
+                top: $gap * 3.5;
+                left: -$gap * 6.2;
+                background: darken($color-accent, 24);
+                padding: $gap *2;
                 z-index: 99;
-                
-                .navbar-list__item {
-
-                    &:hover {
-                        background: transparent;
-                        border-bottom: 1px solid $color-accent;
-                    }
-                }
             }
+
 
             @include md-min {
                 display: flex;
-            }
-
-            @include md {
-                display: none;
             }
 
             &__item {
@@ -143,13 +118,23 @@
                 transition: background-color .3s;
                 font-family: $font-header;
                 border: 1px solid transparent;
-
+                position: relative;
                 @include md {
                     padding: $gap / 3.5;
+                    border-radius: 0;
                 }
 
                 &:hover {
-                    background-color: $color-accent;
+
+                  &::after{
+                      position: absolute;
+                      content: "";
+                      width: 182%;
+                      z-index: -1;
+                      height: 100%;
+                      top: 0;left: -31px;
+                      background:rgba($color-accent,.6);
+                  }
                 }
             }
         }
@@ -164,27 +149,33 @@
         &__title {
             font-size: 3rem;
             line-height: 4rem;
-            @include ul-min{
+
+            @include ul-min {
                 font-size: 3rem;
                 line-height: 4rem;
             }
-            @include lg-min{
+
+            @include lg-min {
                 font-size: 3rem;
                 line-height: 2rem;
             }
-            @include lg-md{
+
+            @include lg-md {
                 font-size: 2rem;
                 line-height: 2rem;
             }
-            @include md-sm{
+
+            @include md-sm {
                 font-size: 1.8rem;
                 line-height: 2rem;
             }
-            @include xx-min{
+
+            @include xx-min {
                 font-size: 1.5rem;
                 line-height: 1.6rem;
             }
-            @include xx{
+
+            @include xx {
                 font-size: 1rem;
                 line-height: 1.6rem;
             }
@@ -194,17 +185,20 @@
             font-size: 1.125rem;
             padding-bottom: $gap * 3.33333;
             color: $color-main;
-            @include xl-lg{
+
+            @include xl-lg {
                 font-size: 1.5rem;
             }
-            @include lg-md{
+
+            @include lg-md {
                 font-size: .875rem;
             }
-            @include md-sm{
+
+            @include md-sm {
                 font-size: 0.675rem;
             }
-          
-            @include xx{
+
+            @include xx {
                 font-size: .775rem;
             }
         }

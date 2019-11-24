@@ -1,11 +1,11 @@
-document.querySelector(".navbar-hamburger").onclick = function () {
-    active()
-};
+$(document).ready(function () {
 
-function active() {
-    document.querySelector(".navbar-hamburger").classList.toggle("active");
-    document.querySelector(".navbar-list").classList.toggle("show");
-};
+    $('.navbar-hamburger').on('click', function () {
+      $(this).toggleClass('active');
+      $('.navbar-list').stop(true, true).fadeToggle(500);
+    });
+  
+  });
 
 
 document.body.onload = function () {
