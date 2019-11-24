@@ -1152,6 +1152,9 @@ ul {
   -o-transition: border-color .4s;
   transition: border-color .4s;
   outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
 }
 
 .contact-form .form-input:nth-of-type(5) {
