@@ -1,35 +1,47 @@
-.footer{
+.footer {
     background-color: $color-accent;
-    &-content{
+
+    &-content {
         @extend %section;
-        &__copirait{
+
+        &__copirait {
             text-align: center;
             padding-top: $gap * 4;
             color: $color-main;
         }
     }
-    &-social{
+
+    &-social {
         display: flex;
         justify-content: center;
-        &__item{
-           margin: $gap / 2;
-           border: 1px solid $color-main;
-                 border-radius: 50%;
-                 padding: 5px;
-                 width: 30px;height: 30px;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-                 position: relative;
-          &:nth-child(2)::after{
-              position: absolute;
-              content: "";
-              left: $gap;
-              bottom: -$gap * 2.5;
-              width: 50px;
-              height: 2px;
-              background-color: $color-main;
-          }
+
+        &__item {
+            margin: $gap / 2;
+            border: 1px solid $color-main;
+            border-radius: 50%;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: background-color .3s, color .3s;
+
+            &:hover {
+                background-color: $color-main;
+                color: $color-accent;
+            }
+
+            &:nth-child(2)::after {
+                position: absolute;
+                content: "";
+                left: $gap;
+                bottom: -$gap * 2.5;
+                width: 50px;
+                height: 2px;
+                background-color: $color-main;
+            }
         }
     }
 }

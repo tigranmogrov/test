@@ -414,6 +414,10 @@ ul {
   background: rgba(192, 48, 28, 0.6);
 }
 
+.header .navbar-list__item:hover {
+  background: rgba(192, 48, 28, 0.7);
+}
+
 .header-content {
   position: relative;
   text-align: center;
@@ -472,6 +476,14 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -webkit-transition: background-color .3s, color .3s;
+  -o-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
+}
+
+.footer-social__item:hover {
+  background-color: #fff;
+  color: #c0301c;
 }
 
 .footer-social__item:nth-child(2)::after {
@@ -805,6 +817,13 @@ ul {
 .about-carusel .next {
   top: 50%;
   left: 9px;
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.about-carusel .next:hover {
+  background-color: #c0301c;
 }
 
 .about-carusel .next i {
@@ -817,6 +836,13 @@ ul {
 .about-carusel .previus {
   top: 50%;
   right: 9px;
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.about-carusel .previus:hover {
+  background-color: #c0301c;
 }
 
 .about-carusel .previus i {

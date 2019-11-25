@@ -53,7 +53,7 @@
         position: relative;
 
         &:hover {
-            
+
             .controls {
                 opacity: 1;
             }
@@ -71,12 +71,19 @@
             background-color: rgba(#000, .3);
             transition: opacity .4s;
         }
-.no_active{
-    background: #000;
-}
+
+        .no_active {
+            background: #000;
+        }
+
         .next {
             top: 50%;
             left: 9px;
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $color-accent;
+            }
 
             @include sm {
                 transform: translatey(-50%);
@@ -91,6 +98,11 @@
         .previus {
             top: 50%;
             right: 9px;
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $color-accent;
+            }
 
             @include sm-min {
                 right: 14px;
