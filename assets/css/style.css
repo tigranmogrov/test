@@ -639,8 +639,6 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
 }
 
 .work-images__wrap {
@@ -776,88 +774,46 @@ ul {
 }
 
 .about-carusel {
-  margin-left: -8px;
-  margin-right: -8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  position: relative;
+  margin-left: -10px;
+  margin-right: -9px;
 }
 
-.about-carusel:hover .controls {
+.about-carusel:hover .slick-arrow {
   opacity: 1;
 }
 
-.about-carusel .controls {
-  position: absolute;
-  width: 35px;
-  height: 38px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.about-carusel .slick-arrow {
+  background: #363636;
+  top: 50%;
   opacity: 0;
-  z-index: 33;
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-transition: opacity .4s;
-  -o-transition: opacity .4s;
-  transition: opacity .4s;
-}
-
-.about-carusel .no_active {
-  background: #000;
-}
-
-.about-carusel .next {
-  top: 50%;
-  left: 9px;
-  -webkit-transition: background-color .3s;
-  -o-transition: background-color .3s;
-  transition: background-color .3s;
-}
-
-.about-carusel .next:hover {
-  background-color: #c0301c;
-}
-
-.about-carusel .next i {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  padding: 10px 15px;
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
+  position: absolute;
   color: #fff;
+  -webkit-transition: background-color .3s, color .3s, opacity .4s;
+  -o-transition: background-color .3s, color .3s, opacity .4s;
+  transition: background-color .3s, color .3s, opacity .4s;
+  z-index: 1;
 }
 
-.about-carusel .previus {
-  top: 50%;
-  right: 9px;
-  -webkit-transition: background-color .3s;
-  -o-transition: background-color .3s;
-  transition: background-color .3s;
-}
-
-.about-carusel .previus:hover {
+.about-carusel .slick-arrow:hover {
   background-color: #c0301c;
+  color: #000;
 }
 
-.about-carusel .previus i {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  color: #fff;
+.about-carusel .fa-chevron-right {
+  right: 8px;
+}
+
+.about-carusel .fa-chevron-left {
+  left: 10px;
 }
 
 .about-carusel__item {
-  padding: 0 10px;
-  margin-left: -1px;
+  margin: 0 10px;
   margin-top: 70px;
-  width: 260px;
-  height: auto;
 }
 
 .about-carusel__item img {
@@ -878,6 +834,7 @@ ul {
 
 .about-image {
   position: relative;
+  margin-bottom: 15px;
 }
 
 .about-image:hover .about-social {
@@ -1087,8 +1044,33 @@ ul {
 }
 
 .clients-partner img {
+  display: inline;
   vertical-align: middle;
   margin: 15px 30px;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slick-dots li button {
+  width: 20px;
+  height: 20px;
+  background: #e4e4e4;
+  border-radius: 50%;
+  color: #e4e4e4;
+  border: 1px solid #e4e4e4;
+  margin: 0 5px;
+}
+
+.slick-active button {
+  background: #c0301c !important;
+  color: #c0301c !important;
 }
 
 .contact {
@@ -1304,15 +1286,6 @@ ul {
   .header-content__title {
     font-size: 1.5rem;
     line-height: 1.6rem;
-  }
-  .about-carusel .previus {
-    right: 12px;
-  }
-}
-
-@media (min-width: 576px) {
-  .about-carusel .previus {
-    right: 14px;
   }
 }
 
@@ -1635,17 +1608,6 @@ ul {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  .about-carusel .next {
-    -webkit-transform: translatey(-50%);
-        -ms-transform: translatey(-50%);
-            transform: translatey(-50%);
-  }
-  .about-carusel .previus {
-    right: 11px;
-    -webkit-transform: translatey(-50%);
-        -ms-transform: translatey(-50%);
-            transform: translatey(-50%);
-  }
   .about-carusel__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1702,9 +1664,6 @@ ul {
   .services-block {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .about-carusel .previus {
-    right: 11px;
   }
   .paralax-content__title {
     width: 100%;

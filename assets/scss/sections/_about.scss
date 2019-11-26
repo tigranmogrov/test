@@ -46,93 +46,46 @@
     }
 
     &-carusel {
-        margin-left: -8px;
-        margin-right: -8px;
-        display: flex;
-        overflow: hidden;
-        position: relative;
+        margin-left: -10px;
+        margin-right: -9px;
 
         &:hover {
 
-            .controls {
+            .slick-arrow {
                 opacity: 1;
             }
         }
 
-        .controls {
-            position: absolute;
-            width: 35px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .slick-arrow {
+            background: darken($color-main-dark, 76);
+            top: 50%;
             opacity: 0;
-            z-index: 33;
-            background-color: rgba(#000, .3);
-            transition: opacity .4s;
-        }
-
-        .no_active {
-            background: #000;
-        }
-
-        .next {
-            top: 50%;
-            left: 9px;
-            transition: background-color .3s;
+            padding: 10px 15px;
+            transform: translateY(-25%);
+            position: absolute;
+            color: $color-main;
+            transition: background-color .3s, color .3s, opacity .4s;
+            z-index: 1;
 
             &:hover {
                 background-color: $color-accent;
-            }
-
-            @include sm {
-                transform: translatey(-50%);
-            }
-
-            i {
-                transform: rotate(-90deg);
-                color: $color-main;
+                color: #000;
             }
         }
 
-        .previus {
-            top: 50%;
-            right: 9px;
-            transition: background-color .3s;
-
-            &:hover {
-                background-color: $color-accent;
-            }
-
-            @include sm-min {
-                right: 14px;
-            }
-
-            @include sm {
-                right: 11px;
-                transform: translatey(-50%);
-            }
-
-            @include xx-min {
-                right: 12px;
-            }
-
-            @include xx {
-                right: 11px;
-            }
-
-            i {
-                transform: rotate(90deg);
-                color: $color-main;
-            }
+        .fa-chevron-right {
+            right: 8px;
         }
+
+        .fa-chevron-left {
+            left: 10px;
+        }
+
+
 
         &__item {
-            padding: 0 10px;
-            margin-left: -1px;
+            margin: 0 $gap / 1.5;
             margin-top: 70px;
-            width: 260px;
-            height: auto;
 
             img {
                 display: block;
@@ -173,7 +126,7 @@
 
     &-image {
         position: relative;
-
+        margin-bottom: $gap;
 
         &:hover {
             .about-social {
@@ -183,8 +136,6 @@
             .about-carusel__overlay {
                 background-color: rgba(#000, .5);
             }
-
-
         }
     }
 

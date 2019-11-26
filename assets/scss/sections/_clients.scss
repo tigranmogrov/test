@@ -1,33 +1,64 @@
-.clients{
-    background-color:$color-main-dark;
-    h4{
+.clients {
+    background-color: $color-main-dark;
+
+    h4 {
         display: none;
     }
-    &-content{
+
+    &-content {
         @extend %section;
         text-align: center;
-        p{
+
+        p {
             width: 755px;
             margin: 0 auto;
             padding-bottom: $gap * 3;
+
             @include md {
                 width: 100%;
             }
+
             @include sm {
-             font-size: .875rem;
+                font-size: .875rem;
             }
         }
     }
-    &-partner{
+
+    &-partner {
         padding-bottom: $gap * 4;
-        img{
+
+        img {
+            display: inline;
             vertical-align: middle;
             margin: $gap ($gap * 2);
-           
+
         }
+
         @include sm {
             width: 200px;
             margin: 0 auto;
         }
     }
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+        button {
+            width: 20px;
+            height: 20px;
+            background: darken($color-main-dark, 8);
+            border-radius: 50%;
+            color: darken($color-main-dark, 8);
+            border: 1px solid darken($color-main-dark, 8);
+            margin: 0 5px;
+        }
+    }
+}
+
+.slick-active button {
+    background: $color-accent !important;
+    color: $color-accent !important;
 }
