@@ -803,10 +803,6 @@ ul {
   color: #000;
 }
 
-.about-carusel .fa-chevron-right {
-  right: 8px;
-}
-
 .about-carusel .fa-chevron-left {
   left: 10px;
 }
@@ -847,8 +843,8 @@ ul {
 
 .about-social {
   position: absolute;
-  left: 60px;
-  bottom: 25px;
+  left: 25%;
+  bottom: 15%;
   opacity: 0;
   -webkit-transition: opacity .8s;
   -o-transition: opacity .8s;
@@ -1287,6 +1283,9 @@ ul {
     font-size: 1.5rem;
     line-height: 1.6rem;
   }
+  .about-carusel .fa-chevron-right {
+    right: 10px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1316,6 +1315,9 @@ ul {
     font-size: 3rem;
     line-height: 4rem;
   }
+  .about-carusel .fa-chevron-right {
+    right: 7px;
+  }
   .about-carusel__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
@@ -1327,6 +1329,9 @@ ul {
   .footer-content, .services-content, .work-content, .about-content, .paralax-content, .blog-content, .clients-content, .contact-content {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .about-carusel .fa-chevron-right {
+    right: 7px;
   }
 }
 
@@ -1361,6 +1366,9 @@ ul {
   .header-content__subtitle {
     font-size: 1.5rem;
   }
+  .about-carusel .fa-chevron-right {
+    right: 7px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1384,6 +1392,9 @@ ul {
   }
   .work-images__caption-button i {
     font-size: .845rem;
+  }
+  .about-carusel .fa-chevron-right {
+    right: 9px;
   }
 }
 
@@ -1484,6 +1495,9 @@ ul {
   .about-content__text-item {
     padding: 15px 15px 0 15px;
   }
+  .about-carusel .fa-chevron-right {
+    right: 10px;
+  }
   .about-carusel__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -1572,6 +1586,11 @@ ul {
   .header-content__subtitle {
     font-size: 0.675rem;
   }
+  .about-carusel .slick-arrow {
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 @media (max-width: 575px) {
@@ -1608,10 +1627,16 @@ ul {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+  .about-carusel .fa-chevron-right {
+    right: 9px;
+  }
   .about-carusel__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+  .about-social {
+    left: 30%;
   }
   .paralax-content__title {
     width: 100%;

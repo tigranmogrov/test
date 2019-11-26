@@ -67,6 +67,10 @@
             transition: background-color .3s, color .3s, opacity .4s;
             z-index: 1;
 
+            @include md-sm {
+                transform: translateY(-50%);
+            }
+
             &:hover {
                 background-color: $color-accent;
                 color: #000;
@@ -74,7 +78,35 @@
         }
 
         .fa-chevron-right {
-            right: 8px;
+            @include ul-min {
+                right: 7px;
+            }
+
+            @include ul-xl {
+                right: 7px;
+            }
+
+            @include xl-lg {
+                right: 7px;
+            }
+            
+            @include lg {
+                right: 9px;
+            }
+
+
+            @include md {
+                right: 10px;
+            }
+           
+            @include sm {
+                right: 9px;
+            }
+
+            @include xx-min {
+                right: 10px;
+            }
+
         }
 
         .fa-chevron-left {
@@ -141,16 +173,18 @@
 
     &-social {
         position: absolute;
-        left: 60px;
-        bottom: 25px;
+        left: 25%;
+        bottom: 15%;
         opacity: 0;
         transition: opacity .8s;
-
+        @include sm {
+            left: 30%;
+        }
         &__item {
             padding: 5px 7.5px;
             font-size: 1.3rem;
             transition: background .3s;
-
+           
             &:hover {
                 background: $color-accent;
             }
