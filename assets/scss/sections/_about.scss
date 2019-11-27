@@ -64,7 +64,6 @@
       position: absolute;
       z-index: 1;
       top: 50%;
-
       padding: 10px 15px;
 
       transition: background-color 0.3s, color 0.3s, opacity 0.4s;
@@ -87,12 +86,14 @@
     .fa-chevron-right {
       right: 7px;
 
-      @include sm {
-        right: 10px;
-      }
       @include lg {
         right: 9px;
       }
+
+      @include sm {
+        right: 10px;
+      }
+
     }
 
     .fa-chevron-left {
@@ -105,25 +106,8 @@
       margin: 0 $gap / 1.5;
       margin-top: 70px;
 
-      @include sm {
-        flex: 0 0 100%;
-      }
-      @include md {
-        flex: 0 0 50%;
-      }
-      @include lg-md {
-        flex: 0 0 33.333%;
-      }
-      @include ul-lg {
-        flex: 0 0 25%;
-      }
-      @include ul-min {
-        flex: 0 0 25%;
-      }
-
       img {
         display: block;
-
         width: 100%;
       }
     }
@@ -157,17 +141,14 @@
   }
 
   &-social {
+    width: 100%;
     position: absolute;
-    bottom: 15%;
-    left: 25%;
-
+    bottom: 30px;
+    left: 10px;
     transition: opacity 0.8s;
 
     opacity: 0;
 
-    @include sm {
-      left: 30%;
-    }
     &__item {
       padding: 5px 7.5px;
 
