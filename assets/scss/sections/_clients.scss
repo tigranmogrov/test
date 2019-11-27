@@ -1,69 +1,71 @@
 .clients {
-    background-color: $color-main-dark;
+  background-color: $color-main-dark;
 
-    h4 {
-        display: none;
+  h4 {
+    display: none;
+  }
+
+  &-content {
+    text-align: center;
+
+    @extend %section;
+
+    p {
+      width: 755px;
+      margin: 0 auto;
+      padding-bottom: $gap * 3;
+
+      @include sm {
+        font-size: 0.875rem;
+      }
+      @include md {
+        width: 100%;
+      }
+    }
+  }
+
+  &-partner {
+    padding-bottom: $gap * 4;
+
+    @include sm {
+      width: 200px;
+      margin: 0 auto;
     }
 
-    &-content {
-        @extend %section;
-        text-align: center;
+    img {
+      display: inline;
 
-        p {
-            width: 755px;
-            margin: 0 auto;
-            padding-bottom: $gap * 3;
+      margin: $gap ($gap * 2);
 
-            @include md {
-                width: 100%;
-            }
-
-            @include sm {
-                font-size: .875rem;
-            }
-        }
+      vertical-align: middle;
     }
-
-    &-partner {
-        padding-bottom: $gap * 4;
-
-        img {
-            display: inline;
-            vertical-align: middle;
-            margin: $gap ($gap * 2);
-
-        }
-
-        @include sm {
-            width: 200px;
-            margin: 0 auto;
-        }
-    }
+  }
 }
 
 .slick-dots {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    li {
-        button {
-            width: 20px;
-            height: 20px;
-            background: darken($color-main-dark, 8);
-            border-radius: 50%;
-            color: darken($color-main-dark, 8);
-            border: 1px solid darken($color-main-dark, 8);
-            margin: 0 5px;
-            outline: none;
-        }
+  li {
+    button {
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+
+      color: darken($color-main-dark, 8);
+      border: 1px solid darken($color-main-dark, 8);
+      border-radius: 50%;
+      outline: none;
+      background: darken($color-main-dark, 8);
     }
+  }
 }
 
 .slick-active button {
-    background: $color-accent !important;
-    color: $color-accent !important;
-   
-    &:focus{
-        outline: none;
-    }
+  color: $color-accent !important;
+  background: $color-accent !important;
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -1,216 +1,231 @@
 .header {
+  position: relative;
+
+  min-height: 100vh;
+
+  background-position: center top;
+  background-size: cover;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(#000000, 0.45);
+  }
+
+  &-menu {
     position: relative;
-    min-height: 100vh;
-    background-position: center top;
-    background-size: cover;
 
-    &-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: $gap * 2;
+  }
+
+  &-logo {
+    font-family: $font-header;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    @include sm {
+      font-size: 1.675rem;
+    }
+  }
+
+  .navbar {
+    position: relative;
+
+    &-hamburger {
+      position: relative;
+
+      width: 30px;
+      height: 23px;
+      margin: $gap 0;
+
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      transform: rotate(0deg);
+
+      @include md {
+        display: block;
+      }
+      @include md-min {
+        display: none;
+      }
+
+      span {
         position: absolute;
-        top: 0;
         left: 0;
+
+        display: block;
+
         width: 100%;
-        height: 100%;
-        background-color: rgba(#000, .45);
-    }
+        height: 3px;
 
-    &-menu {
-        position: relative;
-        padding-top: $gap * 2;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        transition: all 0.35s ease-in-out;
 
-    &-logo {
-        font-size: 1.5rem;
-        font-family: $font-header;
-        font-weight: bold;
+        opacity: 1;
+        border-radius: 3px;
+        background: $color-main;
 
-        @include sm {
-            font-size: 1.675rem;
-        }
-    }
-
-    .navbar {
-        position: relative;
-
-        &-hamburger {
-            position: relative;
-            width: 30px;
-            height: 23px;
-            margin: $gap 0;
-            cursor: pointer;
-            transition: 0.5s ease-in-out;
-            transform: rotate(0deg);
-
-            @include md-min {
-                display: none;
-            }
-
-            @include md {
-                display: block;
-            }
-
-            span {
-                position: absolute;
-                left: 0;
-                display: block;
-                width: 100%;
-                height: 3px;
-                transition: all 0.35s ease-in-out;
-                opacity: 1;
-                border-radius: 3px;
-                background: $color-main;
-
-                &:nth-of-type(1) {
-                    top: 0;
-                }
-
-                &:nth-of-type(2) {
-                    top: 9px;
-                }
-
-                &:nth-of-type(3) {
-                    top: 18px;
-                }
-            }
-
-            &.active span {
-
-                &:nth-of-type(1) {
-                    top: 3px;
-                    transform: translateY(5px)rotate(-135deg);
-                }
-
-                &:nth-of-type(2) {
-                    opacity: 0;
-                }
-
-                &:nth-of-type(3) {
-                    top: 3px;
-                    transform: translateY(5px)rotate(135deg);
-                }
-
-            }
-
-
+        &:nth-of-type(1) {
+          top: 0;
         }
 
-        &-list {
-            backface-visibility: hidden;
-            display: flex;
-
-            @include md {
-                display: none;
-                position: absolute;
-                top: $gap * 3.5;
-                left: -$gap * 5.7;
-                width: 130px;
-                text-align: center;
-                background: darken($color-accent, 24);
-                z-index: 99;
-            }
-
-
-
-
-            &__item {
-                padding: $gap;
-                border-radius: $gap / 2;
-                transition: background-color .3s;
-                font-family: $font-header;
-                border: 1px solid transparent;
-                position: relative;
-
-                @include md {
-                    padding: $gap / 2;
-
-                    &:hover {
-
-                        &::after {
-                            position: absolute;
-                            content: "";
-                            width: 100%;
-                            z-index: -1;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            background: rgba($color-accent, .6);
-                        }
-                    }
-                }
-
-
-            }
+        &:nth-of-type(2) {
+          top: 9px;
         }
+
+        &:nth-of-type(3) {
+          top: 18px;
+        }
+      }
+
+      &.active span {
+        &:nth-of-type(1) {
+          top: 3px;
+
+          transform: translateY(5px)rotate(-135deg);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          top: 3px;
+
+          transform: translateY(5px)rotate(135deg);
+        }
+      }
     }
 
-    &-content {
-        position: relative;
+    &-list {
+      display: flex;
+
+      backface-visibility: hidden;
+      @include md {
+        position: absolute;
+        z-index: 99;
+        top: $gap * 3.5;
+        left: -$gap * 5.7;
+
+        display: none;
+
+        width: 130px;
+
         text-align: center;
-        padding: ($gap * 15) 0;
-        color: $color-main;
 
-        &__title {
-            font-size: 3rem;
-            line-height: 4rem;
+        background: darken($color-accent, 24);
+      }
 
-            @include ul-min {
-                font-size: 3rem;
-                line-height: 4rem;
+
+
+
+      &__item {
+        position: relative;
+
+        padding: $gap;
+
+        transition: background-color 0.3s;
+
+        border: 1px solid transparent;
+        border-radius: $gap / 2;
+
+        font-family: $font-header;
+
+        @include md {
+          padding: $gap / 2;
+
+          &:hover {
+            &::after {
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: 0;
+
+              width: 100%;
+              height: 100%;
+
+              content: "";
+
+              background: rgba($color-accent, 0.6);
             }
-
-            @include lg-min {
-                font-size: 3rem;
-                line-height: 2rem;
-            }
-
-            @include lg-md {
-                font-size: 2rem;
-                line-height: 2rem;
-            }
-
-            @include md-sm {
-                font-size: 1.8rem;
-                line-height: 2rem;
-            }
-
-            @include xx-min {
-                font-size: 1.5rem;
-                line-height: 1.6rem;
-            }
-
-            @include xx {
-                font-size: 1rem;
-                line-height: 1.6rem;
-            }
+          }
         }
-
-        &__subtitle {
-            font-size: 1.125rem;
-            padding-bottom: $gap * 3.33333;
-            color: $color-main;
-
-            @include xl-lg {
-                font-size: 1.5rem;
-            }
-
-            @include lg-md {
-                font-size: .875rem;
-            }
-
-            @include md-sm {
-                font-size: 0.675rem;
-            }
-
-            @include xx {
-                font-size: .775rem;
-            }
-        }
-
-        &__buttons {
-            @extend %btn-accent;
-            margin: 0 auto;
-        }
+      }
     }
+  }
+
+  &-content {
+    position: relative;
+
+    padding: ($gap * 15) 0;
+
+    text-align: center;
+
+    color: $color-main;
+
+    &__title {
+      font-size: 3rem;
+      line-height: 4rem;
+
+      @include xx {
+        font-size: 1rem;
+        line-height: 1.6rem;
+      }
+      @include xx-min {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+      }
+      @include md-sm {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      @include lg-md {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      @include lg-min {
+        font-size: 3rem;
+        line-height: 2rem;
+      }
+      @include ul-min {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+
+    &__subtitle {
+      padding-bottom: $gap * 3.33333;
+
+      color: $color-main;
+
+      font-size: 1.125rem;
+
+      @include xx {
+        font-size: 0.775rem;
+      }
+      @include md-sm {
+        font-size: 0.675rem;
+      }
+      @include lg-md {
+        font-size: 0.875rem;
+      }
+      @include xl-lg {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__buttons {
+      margin: 0 auto;
+
+      @extend %btn-accent;
+    }
+  }
 }

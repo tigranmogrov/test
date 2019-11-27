@@ -1,47 +1,56 @@
 .paralax {
   max-width: 100%;
+
   background-image: url(../img/Paralax.png);
-    background-position: center center;
-    background-size: cover;
-    h4{
-        display: none;
-    }
-   
-    &-content {
-        @extend %section;
+  background-position: center center;
+  background-size: cover;
+  h4 {
+    display: none;
+  }
+
+  &-content {
+    text-align: center;
+
+    @extend %section;
+    &__title {
+      width: 480px;
+      margin: $gap auto;
+
+      color: $color-main;
+
+      font-size: 1.875rem;
+      line-height: 2.9rem;
+
+      @include xx {
+        width: 100%;
+
         text-align: center;
-        &__title{
-            width: 480px;
-            margin: $gap auto;
-            color: $color-main;
-            line-height: 2.9rem;
-            font-size: 1.875rem;
-            @include lg-md {
-                width: 100%;
-              font-size: 1rem;
-              line-height: 1.9rem;
-              text-align: center;
-              }
-              @include sm {
-                width: 100%;
-              font-size: 1rem;
-              line-height: 1.2rem;
-              text-align: center;
-              }
-              @include xx {
-                width: 100%;
-              font-size: .875rem;
-              line-height: 1rem;
-              text-align: center;
-              }
-        }
-        &__button{
-         @extend  %btn-accent;
-         margin: 0 auto;
-           }
+
+        font-size: 0.875rem;
+        line-height: 1rem;
+      }
+      @include sm {
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      @include lg-md {
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
     }
-  
+    &__button {
+      margin: 0 auto;
 
-
+      @extend  %btn-accent;
+    }
+  }
 }
 
