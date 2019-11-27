@@ -407,17 +407,6 @@ ul {
   position: relative;
 }
 
-.header .navbar-list__item:hover::after {
-  position: absolute;
-  content: "";
-  width: 183%;
-  z-index: -1;
-  height: 100%;
-  top: 0;
-  left: -31px;
-  background: rgba(192, 48, 28, 0.6);
-}
-
 .header-content {
   position: relative;
   text-align: center;
@@ -1464,6 +1453,16 @@ ul {
   .header .navbar-list__item {
     padding: 4.28571px;
     border-radius: 0;
+  }
+  .header .navbar-list__item:hover::after {
+    position: absolute;
+    content: "";
+    width: 184%;
+    z-index: -1;
+    height: 100%;
+    top: 0;
+    left: -31px;
+    background: rgba(192, 48, 28, 0.6);
   }
   .services-block {
     -ms-flex-wrap: wrap;
