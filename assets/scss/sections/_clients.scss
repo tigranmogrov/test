@@ -54,6 +54,7 @@
             color: darken($color-main-dark, 8);
             border: 1px solid darken($color-main-dark, 8);
             margin: 0 5px;
+            outline: none;
         }
     }
 }
@@ -61,4 +62,8 @@
 .slick-active button {
     background: $color-accent !important;
     color: $color-accent !important;
+   
+    &:focus{
+        outline: none;
+    }
 }
